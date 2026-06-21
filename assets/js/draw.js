@@ -1,5 +1,5 @@
 // Configuration - path from JS folder to DB folder
-var PRIZES_URL = new URL("../../DB/prizes.json", import.meta.url).href;
+var PRIZES_URL = "../../DB/prizes.json";
 var prizes = [];
 
 /**
