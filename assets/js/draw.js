@@ -1,5 +1,5 @@
 // Configuration - path from JS folder to DB folder
-var PRIZES_URL = "../DB/prizes.json";
+var PRIZES_URL = "../../DB/prizes.json";
 var prizes = [];
 
 /**
