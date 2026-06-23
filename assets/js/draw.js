@@ -101,6 +101,11 @@ function showPrize(prize) {
   var prizeImage = prizeContent.querySelector(".prize");
   var rarity = prizeContent.querySelector(".rarity");
 
+  fetch("../audio/tada.mp3")
+  .then(response => console.log(response.ok))
+  .catch(err => console.error("File not found:", err));
+  var dropSound = new Audio("/assets/audio/tada.mp3");
+
   // Set the rarity
   var prizeRarity = getRarityInfo(prize.rarity);
   rarity.classList.add(prizeRarity.label.toLowerCase());
@@ -118,6 +123,7 @@ function showPrize(prize) {
     target.classList.add("active");
     window.setTimeout(function () {
       prizeContent.classList.add("zoomIn");
+      dropSound.play();
     }, 15);
 
     
